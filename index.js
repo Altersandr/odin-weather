@@ -1,16 +1,23 @@
 const input = document.getElementById('location');
 const btn = document.getElementById('submit');
+const sunrise = document.querySelector('[data-sunrise]');
+
+btn.innerHTML = '<img class = "magnify" src="/img/icons/magnifying-glass-unscreen.gif" alt="magnifying">';
 
 async function fetchWeather(e){
-    e.prevent.default()
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&APPID=67978a2d7aed027f50f49b607fd26f72&units=metric`);
-    
-    const json = await response.json()
-    console.log(json)
+    e.preventDefault()
 
-    const data = getData(json);
+    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&cnt=7&APPID=67978a2d7aed027f50f49b607fd26f72&units=metric`);
 
-    console.log(data)
+    const jsonWeather = await weatherResponse.json()
+
+    console.log(jsonWeather)
+
+    const weatherData = getData(jsonWeather);
+
+    console.log(weatherData)
+
+    console.log(new Date(1671810201).toLocaleTimeString())
 
 };
 
