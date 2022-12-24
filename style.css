@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Jam Sessions";
+    src: url(/res/Jam\ Sessions\ Personal\ Use.ttf);
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -42,7 +48,7 @@ body{
 }
 
 input[type="text"]{
-    width: 400px;
+    max-width: 400px;
     height: 40px;
     border: none;
     font-size: 1.2em;
@@ -80,7 +86,9 @@ input[type="text"]::placeholder{
 }
 
 h1{
-    color: rgb(255, 255, 255, .9);
+    letter-spacing: .09em;
+    font-family: "Jam Sessions";
+    color: rgb(255, 255, 255);
     font-size: 50px;
 }
 
@@ -95,7 +103,7 @@ h1{
 }
 
 #display{
-   /* From https://css.glass */
+   /* Glassmorphism From https://css.glass */
     background: rgba(255, 255, 255, .1);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -135,7 +143,7 @@ h1{
     max-width: 80%;
     min-width: 60%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
     grid-template-rows: 1fr 1fr;
     gap: 20px;
 }

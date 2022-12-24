@@ -13,11 +13,12 @@ const day = document.querySelector('[data-day]');
 const city = document.querySelector('.city');
 const toggleSwitch = document.querySelector('.toggle-switch');
 
-btn.innerHTML = '<img class = "magnify" src="/img/icons/magnifying-glass-unscreen.gif" alt="magnifying">';
+btn.innerHTML = '<img class = "magnify" src="/res/icons/magnifying-glass-unscreen.gif" alt="magnifying">';
 
 async function fetchWeather(e){
     e.preventDefault()
     let units = "metric";
+    input.value = input.value ==""? "London": input.value;
     if(toggleSwitch.classList.contains('active')){
         units = "imperial"
     }
