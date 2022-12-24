@@ -9,7 +9,6 @@ body{
     padding: 0;  
     display: flex;
     flex-direction: column;
-    /* font-family: 'Permanent Marker', cursive; */
 }
 
 #container{
@@ -49,7 +48,6 @@ input[type="text"]{
     font-size: 1.2em;
     background: none;
     border-bottom: 1px solid rgb(255, 255, 255, .7);
-    /* background-color: rgb(128, 128, 128, .5); */
     color: white;
 }
 
@@ -63,7 +61,6 @@ input[type="text"]::placeholder{
     width: 50px;
     border: none;
     background: none;
-    /* font-family: inherit; */
     border-radius: 5px;
     cursor: pointer;
     opacity: .6;
@@ -85,6 +82,16 @@ input[type="text"]::placeholder{
 h1{
     color: rgb(255, 255, 255, .9);
     font-size: 50px;
+}
+
+#logo{
+    padding-top: 20px;
+    filter: invert(0);
+}
+#title{
+    gap: 3em;
+    display: flex;
+    align-items: center;
 }
 
 #display{
@@ -122,21 +129,18 @@ h1{
     opacity: .7;
 }
 
-#location-icon{
-    
-}
-
 .details{
     position: relative;
     height: 50%;
-    width: 60%;
+    max-width: 80%;
+    min-width: 60%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 20px;
 }
 
-.details div{
+.detail-container{
     background: rgba(255, 255, 255, .1);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -159,6 +163,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     height: 100%;
 }
 
@@ -171,8 +176,43 @@ h1{
     
 }
 
+.toggle-switch {
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: -4em;
+    right: -3em;
+    width: 60px;
+    height: 34px;
+    background-color: rgb(255, 255, 255, .2);
+    border: none;
+    border-radius: 34px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.toggle-switch.active::before {
+    left: calc(100% - 32px);
+}
+
 #footer{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     height: 5%;
     background-color: rgb(255, 255, 255, .2);
-    /* border-top: 1px solid rgb(255, 255, 255, .4); */
 }

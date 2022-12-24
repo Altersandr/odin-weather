@@ -13,7 +13,10 @@
     <div id="container">
 
         <header id="header">
-            <h1>Weather App</h1>
+            <div id="title">
+                <img src="/img/cloudy.png" alt="logo" id="logo" height="200px">
+                <h1>Weather App</h1>
+        </div>
             <form id="form">
 
                 <input type="text" name="location" id="location" required placeholder="E.g. London">
@@ -25,30 +28,29 @@
         <main id="content">
             <div id="display">
                 <div class="location">
-                    <!-- <img id="location-icon" src="/img/icons/location.png" height="20px" alt="location icon"> -->
                     
-                    <p class="city country">Milan</p>
+                    <p class="city country"></p>
                 </div>
-                <div class="temperature">4°C</div>
+                <div class="temperature"></div>
                 <div class="today day date">
                     <div class="today icon">
                         <div class="today">Today</div>
-                        <div class="day">Fri, 23 Dec</div>
-                        <!-- <img src="/" alt="icon"> -->
+                        <div class="day" data-day></div>
                 </div>
                 </div>
                 
             </div>
             <div class="details">
                 <h2 class="weather-details-h2">Weather Details</h2>
-                <div class="sunrise">
+                <button class="toggle-switch">F &nbsp; &nbsp;&nbsp;C</button>
+                <div class="sunrise detail-container">
                     <div class="left">
                         <span>Sunrise</span>
                         <img src="/img/icons/sunrise-unscreen.gif" alt="sunrise" height="80px">
                         <span data-sunrise></span>
                     </div>
                 </div>
-                <div class="sunset">
+                <div class="sunset detail-container">
                     <div class="left">
                         <span>Sunset</span>
                         <img src="/img/icons/sunset-unscreen.gif" alt="sunset" height="80px">
@@ -56,15 +58,15 @@
                     </div>
                    
                 </div>
-                <div class="precipitation">
+                <div class="humidity detail-container">
                     <div class="left">
-                        <span>Precipitation</span>
-                        <img src="/img/icons/drop-unscreen.gif" alt="precipitation" height="80px">
-                        <span data-precipitation></span>
+                        <span>Humidity</span>
+                        <img src="/img/icons/drop-unscreen.gif" alt="humidity" height="80px">
+                        <span data-humidity></span>
                     </div>
                     
                 </div>
-                <div class="clouds">
+                <div class="clouds detail-container">
                     <div class="left">
                         <span>Clouds</span>
                         <img src="/img/icons/clouds-unscreen.gif" alt="clouds" height="80px">
@@ -72,7 +74,7 @@
                     </div>
                     
                 </div>
-                <div class="wind">
+                <div class="wind detail-container">
                     <div class="left">
                         <span>Wind</span>
                         <img src="/img/icons/wind-unscreen.gif" alt="wind" height="80px">
@@ -80,7 +82,7 @@
                     </div>
                    
                 </div>
-                <div class="pressure">
+                <div class="pressure detail-container">
                     <div class="left">
                         <span>Pressure</span>
                         <img src="/img/icons/down-arrow-unscreen.gif" alt="pressure" height="80px">
@@ -88,7 +90,7 @@
                     </div>
                     
                 </div>
-                <div class="feelslike">
+                <div class="feelslike detail-container">
                     <div class="left">
                         <span>Feels like</span>
                         <img src="/img/icons/temperature-unscreen.gif" alt="feelslike" height="80px">
@@ -96,7 +98,7 @@
                     </div>
                     
                 </div>
-                <div class="visibility">
+                <div class="visibility detail-container">
                     <div class="left">
                         <span>Visibility</span>
                         <img src="/img/icons/view-unscreen.gif" alt="visibility" height="80px">
@@ -107,9 +109,14 @@
 
             </div>
         </main>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div id="icons">Icons from Flaticon</div>
+            <div id = 'author'>Copyright © 2022 Altersandr</div>
+            <a href="https://github.com/Altersandr">
+                <img src= "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt = 'Altersandr' width="30px" class="github">
+            </a>
+        </footer>
 
-        <!-- <img src="/img/icons/sun-unscreen.gif" alt="sunny"> -->
     </div>
 
     <script src="index.js"></script>
